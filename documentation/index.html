@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <title>OpenAPI Documentation</title>
+
+        <link rel="stylesheet" href="css/swagger-ui.css">
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="css/custom.css">
+
+        <script src="js/swagger-ui-bundle.js"></script>
+        <script src="js/swagger-ui-standalone-preset.js"></script>
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link
+            href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+            rel="stylesheet">
+
+    </head>
+    <body>
+        <header>
+            <div class="header-container">
+                <div class="header-left">
+                    <div class="arimac-logo">
+                        <img src="images/arimac-logo.png" alt="arimac-logo" />
+                    </div>
+                    <div class="header-title">API Doc</div>
+                    <!-- <div class="header-search">
+                  <input
+                    type="text"
+                    placeholder="Search Documentation"
+                    class="header-search-img"
+                  />
+                </div> -->
+                </div>
+                <div class="header-right">
+                    <nav class="header-nav">
+                        <a href="#" class="nav-link">API</a>
+                        <a href="#" class="nav-link">Support</a>
+                    </nav>
+                    <a href="#"><button class="sign-in-btn">Sign In</button></a>
+                </div>
+            </div>
+        </header>
+
+        <div class="page-content-wrap">
+            <div class="page-content-inner">
+                <div class="sidebar-wrap">
+                    <div class="menu-block">
+                        <h1 class="heading">Get Started</h1>
+                        <div class="sub-menu-block">
+                            <a href="#" class="link">Introduction</a>
+                            <a href="#" class="link">Quick Start</a>
+                            <a href="#" class="link">Client</a>
+                            <a href="#" class="link">Libraries</a>
+                        </div>
+                    </div>
+
+                    <div class="menu-block">
+                        <h1 class="heading">Guide</h1>
+                        <div class="sub-menu-block">
+                            <a href="#" class="link">Authentication </a>
+                            <a href="#" class="link">Error Handling</a>
+                            <a href="#" class="link">Response</a>
+                            <a href="#" class="link">Request</a>
+                            <a href="#" class="link">Pagination</a>
+                            <a href="#" class="link">Webhook</a>
+                        </div>
+                    </div>
+
+                    <div class="menu-block">
+                        <h1 class="heading"> Core Resources</h1>
+                        <div class="sub-menu-block">
+                            <a href="#" class="link">Payment</a>
+                            <a href="#" class="link">Overview</a>
+                            <a href="#" class="link">Accept payment</a>
+                            <a href="#" class="link">Subscription</a>
+                            <a href="#" class="link">Payout</a>
+                            <a href="#" class="link">Refund</a>
+                            <a href="#" class="link">Orders</a>
+                            <a href="#" class="link">Dispute</a>
+                            <a href="#" class="link">Invoicing</a>
+                        </div>
+                    </div>
+                </div>
+                <div id="swagger-ui" class="content-wrap"></div>
+            </div>
+        </div>
+
+        <footer>
+            <div class="footer-wrap">
+                <div class="footer-container">
+                    <div class="footer-title">Arimac</div>
+                    <div class="footer-link-wrap">
+                        <div class="footer-nav">
+                            <a href="#"><li>Home</li></a>
+                            <a href="#"><li>API</li></a>
+                            <a href="#"><li>Support</li></a>
+                            <a href="#"><li>Schemas</li></a>
+                        </div>
+                    </div>
+                    
+                </div>
+                <br />
+                <div class="footer-copyright">
+                    <p>Copyright © 2024 Arimac | All Rights Reserved</p>
+                </div>
+            </div>
+        </footer>
+
+        <script>
+            window.onload = function() {
+                const ui = SwaggerUIBundle({
+                    url: "arimac_ecom.yaml",  // Put the URL to your YAML file here
+                    dom_id: '#swagger-ui',
+                    defaultModelsExpandDepth: -1,
+                    presets: [
+                        SwaggerUIBundle.presets.apis,
+                        SwaggerUIStandalonePreset
+                    ],
+                    layout: "StandaloneLayout",
+                });
+            };
+        </script>
+
+    </body>
+</html>
